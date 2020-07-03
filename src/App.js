@@ -34,7 +34,9 @@ class App extends Component {
     console.log(temp);
   };
   clearList = () => {
-    console.log("clearList ");
+    this.setState({
+      items: [],
+    });
   };
   handleEdit = (id) => {
     console.log("handle edit " + id);
