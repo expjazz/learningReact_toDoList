@@ -39,7 +39,11 @@ class App extends Component {
     });
   };
   handleEdit = (id) => {
-    console.log("handle edit " + id);
+    const selectedItem = this.state.items.find((item) => item.id === id);
+    this.setState({
+      items: this.state.items.filter((item) => item.id !== id),
+      item: selectedItem.title,
+    });
   };
   handleDelete = (id) => {
     this.setState({
