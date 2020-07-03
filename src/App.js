@@ -42,7 +42,9 @@ class App extends Component {
     console.log("handle edit " + id);
   };
   handleDelete = (id) => {
-    console.log("handle delete" + id);
+    this.setState({
+      items: this.state.items.filter((item) => item.id !== id),
+    });
   };
 
   render() {
